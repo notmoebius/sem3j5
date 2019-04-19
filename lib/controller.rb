@@ -17,8 +17,9 @@ class Controller
   end
 
   def index_gossips
-    @view.index_gossips
-
+    # @view.index_gossips fonctionne mais c'est pas MVC
+    gossip_array = Gossip.all
+    @view.index_gossips(gossip_array)
   end
 
 end
